@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace lab1
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace lab1
 
             n = 8;
 
-            lblArray.Text = "Array elements: " + Exercises.getArray(arr, n);
+            lblArray.Text = "Элементы массива: " + Exercises.getArray(arr, n);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -57,8 +57,7 @@ namespace lab1
                 int num = Convert.ToInt32(txtNum.Text);
                 lblResult.Text = Exercises.exercise3(arr, n, num);
             }
-            else lblResult.Text = "Input value is incorrect!";
-            
+            else lblResult.Text = "Введенное значение неверно!";
         }
 
         private void button4_Click(object sender, EventArgs e)

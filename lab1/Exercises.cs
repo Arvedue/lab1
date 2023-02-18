@@ -42,11 +42,11 @@ namespace lab1
                     else if (i > index) sum += arr[i];
                 }
 
-                res.Append("Product of elements before Max: " + product +
-                    "\nSum of elements after Max: " + sum +
-                    "\nResult: " + product / sum);
+                res.Append("Произведение элементов до макчимального занчения: " + product +
+                    "\nСумма элементов после максимального элемента: " + sum +
+                    "\nРезультат выполнения: " + product / sum);
             }
-            else res.Append("Can't find result! The max is the first or last element in the array.");
+            else res.Append("Невозможно найти результат! \nМаксимальный элемент находится на 1-ой или 2-ой позиции.");
 
             return res.ToString();
         }
@@ -63,14 +63,14 @@ namespace lab1
 
             if (index != -1)
             {
-                res.Append("Deleted element: " + arr[index]);
+                res.Append("Удаляемый элемент: " + arr[index]);
                 for (int i = index; i < n - 2; i++)
                     arr[i] = arr[i + 2];
 
-                res.Append("\nModified Array: \n");
+                res.Append("\nИзмененный массив: \n");
                 res.Append(getArray(arr, n - 2));
             }
-            else res.Append("There're no 2 consecutive positive elements in the array!");
+            else res.Append("В массиве нету двух подряд идущих положительных элементов!");
 
             return res.ToString();
         }
@@ -93,10 +93,10 @@ namespace lab1
                 arr[index] = num;
 
 
-                res.Append("\nModified Array: \n");
+                res.Append("\nИзмененный массив: \n");
                 res.Append(getArray(arr, n));
             }
-            else res.Append("There's no negative numbers in the array.");
+            else res.Append("В массиве нету отрицательных элементов.");
 
             return res.ToString();
         }
@@ -114,8 +114,8 @@ namespace lab1
                 }
             }
 
-            if (contains) res.Append("There's positive numbers in the array.");
-            else res.Append("There's NO positive numbers in the array.");
+            if (contains) res.Append("В массиве имеются положительные элементы.");
+            else res.Append("в массиве НЕ имеются положительные элементы.");
 
             return res.ToString();
         }
